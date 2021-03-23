@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}accueil{% endblock %}
+
+{% block body %}
+
+<header id="home-header">
+    <div id="header-img"></div>
+    <h1>Amandine Bensekhri</h1>
+    <h2>Développeuse web et web mobile</h2>
+</header>
+
+<main class="container-fluid p-5">
+
+    <div class="row">
+        <div class="col-12">
+            <h2>Projets</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        {% for projet in projets %}
+            {% if loop.index <= 6 %}
+                <div class="col-4 p-3">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ asset('img/projet/' ~ 'img1.png') }}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ projet.name }}</h5>
+                            <p class="card-text">{{ projet.description|u.truncate(90, '...') }}</p>
+                        </div>
+                        <div class="card-body text-center">
+                            <a href="#" class="btn btn-outline-secondary">Voir plus</a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <div id="skills" class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-12 my-auto">
+                <h2 class="p-5">Compétences</h2>
+            </div>
+
+            <div class="col-sm-10 offset-sm-1 col-md-6 offset-md-0 col-lg-4 p-5">
+                <h3 class="pb-3">Technologies</h3>
+                <div class="dropdown-divider"></div>
+                                        <p data-aos="fade-up"><img class="img-skills" src="img/logo-html.png" alt="logo HTML"> - HTML</p>
+                                        <p data-aos="fade-up"><img src="#" alt="logo CSS"> - CSS</p>
+                                        <p data-aos="fade-up"><img src="#" alt="logo PHP"> - PHP</p>
+                                        <p data-aos="fade-up"><img src="#" alt="logo JavaScript"> - JavaScript</p>
+                                        <p data-aos="fade-up"><img src="#" alt="logo MySQL"> - MySQL</p>
+                                </div>
+
+            <div class="col-sm-10 offset-sm-1 col-md-6 offset-md-0 col-lg-4 p-5">
+                <h3 class="pb-3">Frameworks / bibliothèques</h3>
+                <div class="dropdown-divider"></div>
+                                        <p data-aos="fade-up"><img src="#" alt="logo Symfony"> - Symfony</p>
+                                                            <p data-aos="fade-up"><img src="#" alt="logo Bootstrap"> - Bootstrap</p>
+                                        <p data-aos="fade-up"><img src="#" alt="logo FontAwesome"> - FontAwesome</p>
+                                        <p data-aos="fade-up"><img src="#" alt="logo Twig"> - Twig</p>
+                                </div>
+
+            <div class="col-sm-10 offset-sm-1 col-md-6 offset-md-3 col-lg-4 offset-lg-0 p-5">
+                <h3 class="pb-3">CMS</h3>
+                <div class="dropdown-divider"></div>
+                                        <p data-aos="fade-up"><img src="#" alt="logo PrestaShop"> - PrestaShop</p>
+                                        <p data-aos="fade-up"><img src="#" alt="logo Concrete5"> - Concrete5</p>
+                                        <p data-aos="fade-up"><img src="#" alt="logo WordPress"> - WordPress</p>
+                                        <p data-aos="fade-up"><img src="#" alt="logo Dolibarr"> - Dolibarr</p>
+                                </div>
+
+        </div>
+
+    </div>
+
+</main>
+{% endblock %}
