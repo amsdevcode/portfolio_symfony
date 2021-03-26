@@ -2,8 +2,8 @@ twig:
     default_path: '%kernel.project_dir%/templates'
     globals: 
         copyright: 'Copyright © 2021 -  Amandine Bensekhri'
-        contact_address: '1 rue des développeurs'
-        contact_zip: 12345
-        contact_city: 'DevLand'
-        contact_phone: '01.23.45.67.89'
-        contact_email: 'amandine.bensekhri@test.com'
+        contact_address: '5 rue Lenôtre'
+        contact_zip: 77400
+        contact_city: 'Lagny-sur-Marne'
+        contact_phone: '06.73.84.60.89'
+        contact_email: 'amandine.bensekhri@gmail.com'
